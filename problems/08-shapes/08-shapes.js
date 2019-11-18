@@ -21,5 +21,36 @@ Example for printShape("Diamond", 5, "*");
   * 
 */
 function printShape(shape, height, character) {
-  
+  charString = ""
+  switch(shape){
+    case 'Square': 
+      for (let i = 0; i < height; i++){
+        let printline='';        
+      
+      for (let j = 0; j < height; j++){
+        printline=printline+character;
+      }
+    
+      console.log(printline)
+    }
+    break;
+    case 'Triangle': 
+      for (let i = 0; i < height; i ++){
+        let printline='';
+        for(let j=0;j<i+1;j++){
+            printline=printline+character;
+        }
+        console.log(printline)
+      }
+      break;
+     
+    case 'Diamond':
+      
+      
+    
+  }
 }
+
+printShape('Square', 5, "X")
+printShape('Triangle', 7, '*')
+//printShape('Diamond', 7, '+')
